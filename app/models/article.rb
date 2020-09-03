@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   has_many :taggins
   has_many :tags, through: :taggins
   
+  
   # def tag_list
   #   tags.join(", ")
   # end
