@@ -36,6 +36,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.update(article_params)
 
+    flash.notice = "Article '#{@article.title}' Updated!"
+
     redirect_to article_path(@article)
   end
 end
